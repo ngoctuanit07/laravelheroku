@@ -14,17 +14,16 @@ class CreateBlog extends Migration
     public function up()
     {
         Schema::create('blog', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigInteger('id');
             $table->string('name');
             $table->string('keyword');
             $table->mediumText('short_description');
             $table->longText('description');
-            $table->increments('category_id');
+            $table->integer('category_id');
             $table->string('meta_title');
             $table->string('meta_keyword');
             $table->longText('meta_description');
             $table->integer('status');
-            $table->unique('id');
             $table->timestamps();
         });
     }
