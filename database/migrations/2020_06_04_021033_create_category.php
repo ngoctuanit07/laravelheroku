@@ -22,6 +22,7 @@ class CreateCategory extends Migration
             $table->string('meta_title');
             $table->string('meta_keyword');
             $table->longText('meta_description');
+            $table->primary(['id']);
             $table->timestamps();
         });
     }

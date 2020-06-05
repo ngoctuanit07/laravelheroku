@@ -24,6 +24,7 @@ class CreateBlog extends Migration
             $table->string('meta_keyword');
             $table->longText('meta_description');
             $table->integer('status');
+            $table->primary(['id']);
             $table->timestamps();
         });
     }
