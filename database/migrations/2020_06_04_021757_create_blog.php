@@ -14,7 +14,7 @@ class CreateBlog extends Migration
     public function up()
     {
         Schema::create('blog', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->string('keyword');
             $table->mediumText('short_description');
@@ -24,7 +24,7 @@ class CreateBlog extends Migration
             $table->string('meta_keyword');
             $table->longText('meta_description');
             $table->integer('status');
-            $table->primary(['id']);
+            $table->unique('id');
             $table->timestamps();
         });
     }

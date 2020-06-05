@@ -14,7 +14,7 @@ class CreateCategory extends Migration
     public function up()
     {
         Schema::create('category', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->string('keyword');
             $table->longText('description');
@@ -22,7 +22,7 @@ class CreateCategory extends Migration
             $table->string('meta_title');
             $table->string('meta_keyword');
             $table->longText('meta_description');
-            $table->primary(['id']);
+            $table->unique('id');
             $table->timestamps();
         });
     }
