@@ -12,10 +12,10 @@ class StoreSetting extends CoreRequest
      *
      * @return bool
      */
-    public function authorize()
-    {
-        return false;
-    }
+    // public function authorize()
+    // {
+    //     return false;
+    // }
 
     /**
      * Get the validation rules that apply to the request.
@@ -24,12 +24,12 @@ class StoreSetting extends CoreRequest
      */
     public function rules()
     {
-       return [
+        return [
             "name" => "required",
-            "email" => "required|email|unique:users",
-            "password" => "required|min:6",
-            'slack_username' => 'nullable|unique:employee_details,slack_username'
+            "keyword" => "required",
+            "meta_title" => "required",
+            "meta_keyword" => "required",
+            "meta_description" => "required",
         ];
-
     }
 }

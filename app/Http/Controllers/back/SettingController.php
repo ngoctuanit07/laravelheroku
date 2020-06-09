@@ -5,6 +5,7 @@ namespace App\Http\Controllers\back;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Setting\Setting;
+use App\Http\Requests\Setting\StoreSetting;
 
 class SettingController extends Controller
 {
@@ -63,6 +64,8 @@ class SettingController extends Controller
     public function edit($id)
     {
         //
+        $setting = Setting::find($id);
+        return view('back.page.setting.edit', compact('setting'));
     }
 
     /**
@@ -72,9 +75,19 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreSetting $request, $id)
     {
         //
+        $setting = Setting::find($id);
+        $setting->name = $request->input('name');
+        $setting->keyword = $request->input('keyword');
+        $setting->meta_title = $request->input('meta_title');
+        $setting->meta_keyword = $request->input('meta_keyword');
+        $setting->meta_description = $request->input('meta_description');
+        $setting->save();
+
+        return redirect()->route('setting.index')
+        ->with('success', 'Setting updated successfully');
     }
 
     /**
