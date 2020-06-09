@@ -4,6 +4,7 @@ namespace App\Http\Controllers\back;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\Setting\Setting;
 
 class SettingController extends Controller
 {
@@ -12,9 +13,13 @@ class SettingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        $settings = Setting::orderBy('created_at', 'DESC')->paginate(15);
+
+        return view("back.page.setting.index", compact('settings'))
+        ->with('i', ($request->input('page', 1) - 1) * 15)->with('i', ($request->input('page', 1) - 1) * 15);
     }
 
     /**

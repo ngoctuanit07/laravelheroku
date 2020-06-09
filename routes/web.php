@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });
 */
-Route::get('admin','back\DashboardController@index')->name('admin.index');
-Route::resource('setting', 'SettingController');
+Route::get('admin', 'back\DashboardController@index')->name('admin.index');
+Route::resource('setting', 'back\SettingController');
