@@ -80,12 +80,14 @@ class SettingController extends Controller
         //
         $setting = Setting::find($id);
         $setting->name = $request->input('name');
+        $setting->address = $request->input('address');
+        $setting->address = $request->input('address');
+        $setting->address = $request->input('address');
         $setting->keyword = $request->input('keyword');
         $setting->meta_title = $request->input('meta_title');
         $setting->meta_keyword = $request->input('meta_keyword');
         $setting->meta_description = $request->input('meta_description');
         $setting->save();
-
         return redirect()->route('setting.index')
         ->with('success', 'Setting updated successfully');
     }

@@ -36,6 +36,27 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>{{ __('setting.Address') }}:</strong>
+                {!! Form::text('address', null, array('class' =>'form-control'))
+                !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>{{ __('setting.PhoneNumber') }}:</strong>
+                {!! Form::text('address', null, array('class' =>'form-control'))
+                !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>{{ __('setting.Facebook') }}:</strong>
+                {!! Form::text('fb_link', null, array('class' =>'form-control'))
+                !!}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>{{ __('setting.Keyword') }}:</strong>
                 {!! Form::text('keyword', null, array('class' =>'form-control')) !!}
             </div>

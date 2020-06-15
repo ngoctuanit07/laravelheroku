@@ -20,6 +20,8 @@ return [
     'metadescription' => 'Mô tả seo',
     'pleasemetatitle' => 'Vui lòng nhập tiêu đề seo',
     'metatitle' => 'Tiêu đề seo',
-    'EditSetting'=>'Chỉnh sửa cài đặt'
-
+    'EditSetting'=>'Chỉnh sửa cài đặt',
+    'Address'=>'Địa chỉ',
+    'PhoneNumber'=>'Số điện thoại',
+    'Facebook'=>'Facebook',
 ];
