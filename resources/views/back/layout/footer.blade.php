@@ -5,6 +5,8 @@
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{ asset('back/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+<script src="{{ asset('back/assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script>
+<script src="{{ asset('back/assets/js/pages/crud/forms/editors/ckeditor-classic.js') }}"></script>
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{ asset('back/assets/js/pages/widgets.js') }}"></script>

@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('admin', 'back\DashboardController@index')->name('admin.index');
 Route::resource('setting', 'back\SettingController');
+Route::resource('contacts', 'back\ContactsController');
